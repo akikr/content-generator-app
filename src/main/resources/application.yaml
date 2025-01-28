@@ -1,0 +1,17 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: content-generator
+
+gg:
+  jte:
+    developmentMode: true
+
+app:
+  content:
+    output-directory: ""
+    excluded-patterns: ".git/**, .gitignore, .gitattributes, .dockerignore, .env, *.env, .secrets, *.secrets, .DS_Store, **/.DS_Store, .mvn/**, mvnw, mvnw.cmd, .vscode/**, .idea/**, *.iws, *.iml, *.ipr, *.ico, **/*.ico, .classpath, .project, .settings, *.class, **/*.class, target/**, **/target/**, node_modules/**, build/**"

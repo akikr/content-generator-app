@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "app.content.output-directory",
+      "type": "java.lang.String",
+      "description": "Output folder to keep generated output.txt file. Empty means project's folder."
+    },
+    {
+      "name": "app.content.excluded-patterns",
+      "type": "java.util.List",
+      "description": "List of folders or files to be excluded. Empty means exclude nothing, all types of files and folders will be included."
+    }
+  ]
+}
