@@ -1,6 +1,6 @@
-# Content Generator Service
+# Content Generator App
 
-Welcome to the Content Generator Service!
+Welcome to the Content Generator App!
 This Spring Boot application provides a modern web interface for generating a consolidated text file from the contents of a local directory.
 You can feed this generated consolidated text file with a proper PROMPT to any LLM for preparing documentation, analyzing codebases, or code-review, this tool streamlines the process through an intuitive UI.
 
@@ -130,7 +130,7 @@ Feel free to contribute to this project! Areas for potential enhancement include
 
 ## Conclusion
 
-The Content Generator Service offers a robust solution for file content aggregation with a modern web interface. Its flexible configuration and straightforward architecture make it both powerful and maintainable. Try it out and let us know how it enhances your development workflow!
+This Content Generator app offers a robust solution for file content aggregation with a modern web interface. Its flexible configuration and straightforward architecture make it both powerful and maintainable. Try it out and let us know how it enhances your development workflow!
 
 For questions or issues, please open a GitHub issue or submit a pull request.
 
