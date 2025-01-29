@@ -34,7 +34,9 @@ You can feed this generated consolidated text file with a proper PROMPT to any L
 
 ### Environment Setup
 
-#### The project uses SDKMAN for managing Java and Maven versions. To install SDKMAN refer: [sdkman.io](https://sdkman.io/install)
+#### The project uses SDKMAN for managing Java and Maven versions.
+
+To install SDKMAN refer: [sdkman.io](https://sdkman.io/install)
 
 Initialize your development environment using SDKMAN CLI:
 
