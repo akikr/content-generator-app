@@ -11,6 +11,11 @@ clean:
 	@rm -f output.txt
 	@./mvnw clean
 
+# Verify and format the application code
+verify: clean
+	@echo "Formatting code..."
+	@./mvnw spotless:apply
+
 # Test the application
 test: clean
 	@echo "Running tests..."
@@ -31,6 +36,6 @@ run: clean
 	@echo "Starting application in production mode..."
 	@./mvnw spring-boot:run -Dspring-boot.run.jvmArguments=-Dspring.profiles.active=prod
 
-all: clean test build run
+all: clean verify test build run
 
 .PHONY: all

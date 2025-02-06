@@ -19,6 +19,7 @@
         <spring.boot.maven.plugin.version>3.4.0</spring.boot.maven.plugin.version>
         <spring-jte.version>3.1.12</spring-jte.version>
         <maven.dependency.plugin.version>3.8.0</maven.dependency.plugin.version>
+        <spotless.java-formater.plugin.version>2.29.0</spotless.java-formater.plugin.version>
     </properties>
 
     <dependencyManagement>
@@ -74,6 +75,11 @@
         <pluginManagement>
             <plugins>
                 <plugin>
+                    <groupId>com.diffplug.spotless</groupId>
+                    <artifactId>spotless-maven-plugin</artifactId>
+                    <version>${spotless.java-formater.plugin.version}</version>
+                </plugin>
+                <plugin>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring.boot.maven.plugin.version}</version>
@@ -100,7 +106,19 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
         <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <configuration>
+                    <java>
+                        <eclipse>
+                            <file>${basedir}/eclipse-java-formatter.xml</file>
+                        </eclipse>
+                    </java>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
