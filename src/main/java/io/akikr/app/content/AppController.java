@@ -12,7 +12,8 @@ public class AppController
 {
 	private final AppService appService;
 
-	public AppController(AppService appService)
+	public AppController(
+			AppService appService)
 	{
 		this.appService = appService;
 	}

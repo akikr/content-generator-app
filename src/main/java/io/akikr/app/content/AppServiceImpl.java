@@ -20,7 +20,9 @@ public class AppServiceImpl implements AppService
 	private final FileProcessor fileProcessor;
 	private final TemplateEngine templateEngine;
 
-	public AppServiceImpl(FileProcessor fileProcessor, TemplateEngine templateEngine)
+	public AppServiceImpl(
+			FileProcessor fileProcessor,
+			TemplateEngine templateEngine)
 	{
 		this.fileProcessor = fileProcessor;
 		this.templateEngine = templateEngine;
