@@ -38,7 +38,7 @@ You can feed this generated consolidated text file with a proper PROMPT to any L
 
 To install SDKMAN refer: [sdkman.io](https://sdkman.io/install)
 
-Initialize your development environment using SDKMAN CLI:
+### Initialize your development environment using SDKMAN CLI
 
 ```bash
 sdk env install
@@ -56,7 +56,41 @@ server:
 app:
   content:
     output-directory: "/path/to/local/output/directory"
-    excluded-patterns: ".git/**, .gitignore, .gitattributes, .env, *.env, .DS_Store, **/.DS_Store, .mvn/**, mvnw, mvnw.cmd, .vscode/**, .idea/**, .classpath, .project, .settings, *.class, **/*.class, target/**, **/target/**"
+    include-pattern:
+      - "*.java"
+      - "*.yaml"
+      - "**/*.jte"
+    excluded-patterns:
+      - ".git/**"
+      - "gitignore"
+      - ".gitattributes"
+      - ".dockerignore"
+      - "env"
+      - ".env"
+      - "secrets"
+      - ".secrets"
+      - "DS_Store"
+      - "*/.DS_Store"
+      - ".mvn/**"
+      - "mvnw"
+      - "mvnw.cmd"
+      - "vscode/**"
+      - "idea/**"
+      - "*.iws"
+      - "*.iml"
+      - "*.ipr"
+      - "*.ico"
+      - "**/*.ico"
+      - "classpath"
+      - "project"
+      - "settings"
+      - ".class"
+      - "*/*.class"
+      - "target/**"
+      - "**/target/**"
+      - "node_modules/**"
+      - "build/**"
+      - "*.png"
 ```
 
 - Tip: Keep all file/folder list from your project's `.gitignore` file here in `excluded-patterns`
@@ -74,9 +108,14 @@ app:
 
 ## Running the Application
 
+#### Need to set up the environment using [this](#initialize-your-development-environment-using-sdkman-cli) before running the application
+
 ### Development Mode
 
 ```bash
+sdk env install
+sdk env
+
 make run-dev
 ```
 
@@ -85,6 +124,9 @@ This command starts the application with hot-reload enabled for template changes
 ### Production Mode
 
 ```bash
+sdk env install
+sdk env
+
 make run
 ```
 
@@ -105,7 +147,7 @@ make build
 
 ## Usage Example
 
-The service provides a web interface accessible at `http://localhost:8081`. Here's how to use it:
+#### The service provides a web interface accessible at [http://localhost:8081](http://localhost:8081). Here's how to use it:
 
 1. Navigate to the home page
 2. Enter a local directory path in the input field
